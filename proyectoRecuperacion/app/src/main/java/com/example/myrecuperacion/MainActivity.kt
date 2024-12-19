@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -70,32 +71,75 @@ class MainActivity : ComponentActivity() {
                     .background(Color.DarkGray),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-            Column(){
-                Text(
-                    text = "Hello Android!", modifier = Modifier
-                        .padding(horizontal = 60.dp)
+                Column() {
+                    Text(
+                        text = "Hello Android!", modifier = Modifier
+                            .padding(horizontal = 80.dp)
+                            .background(Color.Yellow)
+                            .fillMaxWidth(),
+                        textAlign = TextAlign.Center
+                    )
+                    Text(
+                        text = "Hello Android!", modifier = Modifier
+                            .height(50.dp)
+                            .padding(horizontal = 60.dp)
+                            .background(Color.Red)
+                            .fillMaxWidth(),
+                        textAlign = TextAlign.Center
+                    )
+                    Text(
+                        text = "Hello Android!", modifier = Modifier
+                            .padding(horizontal = 60.dp)
+                            .background(Color.White)
+                            .fillMaxWidth(),
+                        textAlign = TextAlign.Center
+                    )
+
+                }
+
+
+            }
+            Row(
+                modifier = Modifier
+                    .padding(50.dp)
+                    .width(350.dp)
+                    .height(150.dp)
+                    .background(Color.Green),
+                horizontalArrangement = Arrangement.End
+
+            ) {
+                Column(
+                    modifier = Modifier
+                        .background(Color.Blue)
+                        .width(150.dp),
+                ) {
+                Row( modifier = Modifier
+                    .background(Color.Blue)
+                    .width(200.dp)){
+                    Button(onClick = {}, modifier = Modifier.width(50.dp).height(50.dp)) { }
+                    Button(onClick = {}, modifier = Modifier.width(50.dp).height(50.dp)) { }
+                    Button(onClick = {}, modifier = Modifier.width(50.dp).height(50.dp)) { }
+                }
+                    Row( modifier = Modifier
                         .background(Color.Yellow)
-                        .fillMaxWidth(),
-                    textAlign = TextAlign.Center
-                )
-                Text(
-                    text = "Hello Android!", modifier = Modifier.height(50.dp)
-                        .padding(horizontal = 60.dp)
-                        .background(Color.Red)
-                        .fillMaxWidth(),
-                    textAlign = TextAlign.Center
-                )
-                Text(
-                    text = "Hello Android!", modifier = Modifier
-                        .padding(horizontal = 60.dp)
+                        .width(200.dp)){
+                        Button(onClick = {}, modifier = Modifier.width(50.dp).height(50.dp)) { }
+                        Button(onClick = {}, modifier = Modifier.width(50.dp).height(50.dp)) { }
+                        Button(onClick = {}, modifier = Modifier.width(50.dp).height(50.dp)) { }
+                    }
+                    Row( modifier = Modifier
                         .background(Color.White)
-                        .fillMaxWidth(),
-                    textAlign = TextAlign.Center
-                )
+                        .width(200.dp)){
+                        Button(onClick = {}, modifier = Modifier.width(50.dp).height(50.dp)) { }
+                        Button(onClick = {}, modifier = Modifier.width(50.dp).height(50.dp)) { }
+                        Button(onClick = {}, modifier = Modifier.width(50.dp).height(50.dp)) { }
+                    }
+
+
+
+                }
 
             }
-            }
-
 
         }
     }
