@@ -51,21 +51,49 @@ class MainActivity : ComponentActivity() {
                     .background(Color.Black),
                 horizontalArrangement = Arrangement.SpaceAround
             ) {
-                Text(text = "Hello Android!",  modifier = Modifier.padding(10.dp)
-                    .background(Color.Red))
-                Text(text = "Hello Android!",  modifier = Modifier.padding(10.dp)
-                    .background(Color.Cyan))
+                Text(
+                    text = "Hello Android!", modifier = Modifier
+                        .padding(10.dp)
+                        .background(Color.Red)
+                )
+                Text(
+                    text = "Hello Android!", modifier = Modifier
+                        .padding(10.dp)
+                        .background(Color.Cyan)
+                )
             }
-            Row( modifier = Modifier
-                .padding(50.dp)
-                .width(350.dp)
-                .height(80.dp)
-                .background(Color.DarkGray),
-                verticalAlignment = Alignment.CenterVertically){
-                Text(text = "Hello Android!",  modifier = Modifier.padding(10.dp)
-                    .background(Color.Red).fillMaxWidth(),
-                    textAlign = TextAlign.Center)
+            Row(
+                modifier = Modifier
+                    .padding(50.dp)
+                    .width(350.dp)
+                    .height(200.dp)
+                    .background(Color.DarkGray),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+            Column(){
+                Text(
+                    text = "Hello Android!", modifier = Modifier
+                        .padding(horizontal = 60.dp)
+                        .background(Color.Yellow)
+                        .fillMaxWidth(),
+                    textAlign = TextAlign.Center
+                )
+                Text(
+                    text = "Hello Android!", modifier = Modifier.height(50.dp)
+                        .padding(horizontal = 60.dp)
+                        .background(Color.Red)
+                        .fillMaxWidth(),
+                    textAlign = TextAlign.Center
+                )
+                Text(
+                    text = "Hello Android!", modifier = Modifier
+                        .padding(horizontal = 60.dp)
+                        .background(Color.White)
+                        .fillMaxWidth(),
+                    textAlign = TextAlign.Center
+                )
 
+            }
             }
 
 
